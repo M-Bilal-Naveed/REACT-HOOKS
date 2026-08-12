@@ -4,6 +4,8 @@ import UseCase from './components/UseState';
 import UseRef from './components/UseRef';
 import { useEffect } from 'react';
 import WithoutRerendering from './components/WithoutRerendering';
+import UseMemo from './components/UseMemo';
+import UseCallback from './components/UseCallback';
 
 function App() {
   const name = "Bilal";
@@ -22,7 +24,9 @@ function App() {
       </div>
       <UseCase />
       <UseRef />
+      <UseMemo />
       <WithoutRerendering />
+      <UseCallback />
     </>
   )
 }
