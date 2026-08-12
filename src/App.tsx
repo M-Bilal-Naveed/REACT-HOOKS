@@ -1,11 +1,16 @@
-import { useState } from 'react'
 import './App.css'
 import Welcome from './components/welcome';
+import UseCase from './components/UseState';
+import UseRef from './components/UseRef';
+import { useEffect } from 'react';
+import WithoutRerendering from './components/WithoutRerendering';
 
 function App() {
-  const [count, setCount] = useState(0)
   const name = "Bilal";
   const age = 23;
+  useEffect(() => {
+    console.log("Component rendered");
+  }, []);
 
   return (
     <>
@@ -15,6 +20,9 @@ function App() {
         <h1>Age: {age}</h1>
         <p>{age >= 18 ? "Adult" : "Minor"}</p>
       </div>
+      <UseCase />
+      <UseRef />
+      <WithoutRerendering />
     </>
   )
 }
